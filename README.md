@@ -18,6 +18,14 @@ The dataset used for training and evaluating this model was obtained from Kaggle
 *   **Validation Set:** 20% (896 - 28 batch) of images
 *   **Testing Set:** 10% (448 - 14 batch
 
+To use dataset:
+```python
+import kagglehub
+# Download latest version
+path = kagglehub.dataset_download("preetviradiya/brian-tumor-dataset")
+print("Path to dataset files:", path)
+```
+
 ## Dependencies
 
 To run this project, you will need the following software and Python packages:
@@ -41,7 +49,7 @@ pip install tensorflow opencv-python matplotlib keras streamlit
 ### Clone the repository
 
 ```bash
-git clone [https://github.com/](https://github.com/)[YourUsername]/[YourRepositoryName].git
+git clone https://github.com/shahriar-hd/BrainTumorDetection.git
 ```
 
 Make sure you have your dataset in the correct directory as defined in your python script.
@@ -52,7 +60,7 @@ To test the model on new images, you can use the provided testing script or inte
 
 Example of testing code:
 
-```Python
+```python
 img = cv2.imread('Cancer.jpg')
 plt.imshow(img)
 resize = tf.image.resize(img, (256, 256))
@@ -73,7 +81,7 @@ During training the model will save the training history and the best model to t
 
 ## License
 
-This project is licensed under the [MIT License]().
+This project is licensed under the [MIT License](https://github.com/shahriar-hd/BrainTumorDetection/blob/main/LICENSE).
 
 ## ontact
 For any questions or inquiries, please feel free to contact me at [shahriar.hd@outlook.com](mailto:shahriar.hd@outlook.com)
